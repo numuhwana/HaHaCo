@@ -23,11 +23,11 @@ public:
 		{ "w","x","y","z" }//9
 	};
 	void choose(string digits,int cur,vector<string> &arr,string tmp) {
-		if (cur == digits.size()) {//ÇöÀç °¡¸£Å°´Â digits[cur]ÀÌ ÀÌ¹Ì ¹üÀ§ ¹ÛÀÏ¶§
+		if (cur == digits.size()) {//í˜„ì¬ ê°€ë¥´í‚¤ëŠ” digits[cur]ì´ ì´ë¯¸ ë²”ìœ„ ë°–ì¼ë•Œ
 			arr.push_back(tmp);
 			//print(tmp);
 		}
-		else {//¾Æ´Ñ°æ¿ì ´õ ÁøÇàÇÏ±â
+		else {//ì•„ë‹Œê²½ìš° ë” ì§„í–‰í•˜ê¸°
 			int whtchar = digits[cur] - '0';
 			for (int i = 0; i < let[whtchar].size(); i++) {
 				string backup = tmp;
