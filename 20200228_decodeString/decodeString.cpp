@@ -46,9 +46,6 @@ public:
 						sub.back() += ss;
 					}
 				}
-				//else if (left.empty()) {
-				//	res += s[i];
-				//}
 				else {
 					sub.back() += s[i];
 				}
