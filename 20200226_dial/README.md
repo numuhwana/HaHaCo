@@ -1,8 +1,9 @@
 # 17. Letter Combinations of a Phone Number
 Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.  
-<center>![telphone](./telphone.png)</center>
 
-A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.  
+<center><img src="./telphone.png"></center>  
+
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.    
 
 2부터 9까지의 dial을 눌러 만들수 있는 문자열의 조합을 구하는 문제  
 Input 값이 숫자로 주어지면 숫자에 따른 만들수 있는 모든 문자열의 vector을 반환한다.   
