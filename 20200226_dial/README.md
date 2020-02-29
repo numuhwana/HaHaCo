@@ -1,4 +1,4 @@
-#17. Letter Combinations of a Phone Number
+<h1>17. Letter Combinations of a Phone Number</h1>
 Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 ![telphone](./telphone.png)
 
@@ -12,8 +12,8 @@ example
 Input: "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
-##trial1
-##Intuition
+## trial1
+## Intuition
 알고리즘 설명
 1.주어진 digits 변수가 값이 없는경우에는 아무것도 반환하지 않음
 2.주어진 digits 변수에 값이 있는 경우 choose라는 함수를 호출
