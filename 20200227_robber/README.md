@@ -6,18 +6,18 @@ Given a list of non-negative integers representing the amount of money of each h
 
 도둑이 최대한 많은 돈을 벌면서 도둑질 할때 돈의 수를 반환한다. (털린 집의 바로 옆집은 바로 털지 못한다.)  
 
-** Example 1: **
+**Example 1:**
 ```
-** Input: ** [1,2,3,1]  
-** Output: ** 4  
-** Explanation: ** Rob house 1 (money = 1) and then rob house 3 (money = 3).  
+**Input:** [1,2,3,1]  
+**Output:** 4  
+**Explanation:** Rob house 1 (money = 1) and then rob house 3 (money = 3).  
              Total amount you can rob = 1 + 3 = 4.  
 ```
-** Example 2: **
+**Example 2:**
 ```
-** Input: ** [2,7,9,3,1]  
-** Output: ** 12  
-** Explanation: ** Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).  
+**Input:** [2,7,9,3,1]  
+**Output:** 12  
+**Explanation:** Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).  
              Total amount you can rob = 2 + 9 + 1 = 12.  
 ```
 ## trial 1  
@@ -66,7 +66,7 @@ public:
 ```
 
 ### Results (Performance)  
-** Status: ** Time Limit Exceeded  
+**Status:** Time Limit Exceeded  
 
 ### Problem
 모든 경우의 수를 찾는 방식으로 하면 그 가지수가 n이 커지면 커질수록 너무 많아지기 때문에 알맞은 Time Limit이 뜨게 된다.   
@@ -118,8 +118,8 @@ public:
 ```
 
 ### Results (Performance)  
-** Runtime: ** 4 ms  
-** Memory Usage: ** 8 MB  
+**Runtime:** 4 ms  
+**Memory Usage:** 8 MB  
 
 ### Discussion
 다른 사람의 코드를 살펴보니 훨신 더 간결하게 코드를 짤 수 있다는 것을 알았다. 그 예시로 다음 코드가 되겠다. (출처: leetcode)
