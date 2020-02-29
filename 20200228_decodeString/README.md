@@ -84,7 +84,7 @@ public:
 ```
 
 ### Results (Performance)  
-**Runtime:** 0 ms
+**Runtime:** 0 ms  
 **Memory Usage:** 8 MB
 
 ### Discussion
