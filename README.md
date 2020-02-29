@@ -1,8 +1,8 @@
-# HaHaCo (하루 하나 코딩: Oneday One Coding)  
+# HaHaCo (하루 하나 코딩: Oneday One Code)  
 
 <p align="center"> 
-<img src="./algorithm.png" width="200" height="200">
-<img src="./cpppicture.png" width="200" height="200">
+<img src="./image/algorithm.png" width="200" height="200">
+<img src="./image/cpppicture.png" width="200" height="200">
 </p>
 
 하루에 하나씩 코딩하기 위한 Repository 입니다.  
