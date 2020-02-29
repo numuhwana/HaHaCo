@@ -3,8 +3,6 @@ Given a string containing digits from 2-9 inclusive, return all possible letter 
 <p align="center"> 
 <img src="./telphone.png">
 </p>
-<center><img src="./telphone.png"></center>  
-![telphone](./telphone.png) 
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.  
 
 2부터 9까지의 dial을 눌러 만들수 있는 문자열의 조합을 구하는 문제  
@@ -15,7 +13,7 @@ Input: "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].  
 
 ## trial1
-## Intuition
+### Intuition
 알고리즘 설명
 1.주어진 digits 변수가 값이 없는경우에는 아무것도 반환하지 않음  
 2.주어진 digits 변수에 값이 있는 경우 choose라는 함수를 호출  
@@ -29,7 +27,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 7.choose 함수에 들어갈때에는 tmp 문자열에 현재 선택된 character이 추가된 상태로 진행되어야 하므로 tmp = tmp + let[whtchar][i] 로 추가해준다.  
 8.choose 함수가 끝나게 되면 현재 선택된 character은 다시 지워지고 현재 dial의 다른 character이 선택되어야 하므로 백업을 해준다.  
 
-## Codes  
+### Codes  
 ```cpp
 class Solution {
 public:
@@ -79,10 +77,10 @@ public:
 };
 ```
 
-## Results (Performance)  
+### Results (Performance)  
 Runtime: 4 ms  
 Memory Usage: 8.7 MB  
 
 
-## 문제 URL (LeetCode)  
+### 문제 URL (LeetCode)  
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/  
