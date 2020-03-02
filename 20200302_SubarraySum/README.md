@@ -37,8 +37,9 @@ public:
 **Memory Usage:** 9 MB  
 
 ### Discussion
-내가 처음에 구현한 방법은 speed가 매우 느린것을 확인할 수 있다. 다음 방법은 O(n^2)이기 때문이다.  
+내가 처음에 구현한 방법은 speed가 매우 느린것을 확인할 수 있다. 위의 방법은 O(n^2)이기 때문이다.  
 다른사람의 코드를 살펴보니 unordered_map을 사용해서 더 간단하고 퍼포먼스를 높인 것을 확인 할 수 있었다.  
+아래 코드를 분석해본 결과 합에서 k에 뺄셈을 한 값이 map에 들어있다면 subarray의 합이 k를 만족한다. 그 합이 k를 만족한다면 count에 1을 더하여 정답을 구해준다.
 
 ```cpp
 	int subarraySum(vector<int>& nums, int k) {
