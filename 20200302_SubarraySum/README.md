@@ -8,8 +8,39 @@ Given an array of integers and an integer k, you need to find the total number o
 Input:nums = [1,1,1], k = 2  
 Output: 2   
 ```
-
 ## trial1
+### Intuition
+```
+1.  이중 for문을 이용해서 모든 인자에 대해서 합이 k를 만족하는지 확인하는 방법이다.  
+```
+### Codes  
+```cpp
+class Solution {
+public:
+	int subarraySum(vector<int>& nums, int k) {
+		int cnt = 0;
+		for (int i = 0; i < nums.size(); i++) {
+			int tmp = k;
+			for (int j = i; j < nums.size(); j++) {
+				if (j != i) {
+					if (tmp - nums[j] == 0) { cnt++;}
+				}
+				else {
+					if (tmp - nums[j] == 0) cnt++;
+				}
+				tmp -= nums[j];
+			}
+		}
+		return cnt;
+	}
+};
+```
+
+### Results (Performance)  
+**Runtime:** 848 ms    
+**Memory Usage:**  9.3 MB    
+
+## trial2
 ### Intuition
 ```
 1.  이중 for문을 이용해서 모든 인자에 대해서 합이 k를 만족하는지 확인하는 방법이다.  
