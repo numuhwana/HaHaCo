@@ -12,7 +12,7 @@ This repository is for everyday coding practice.
 I used c++ for studying algorithm.  
 
 ## 문제 출처 (Problem reference)
-LeetCode or 백준  
+LeetCode, 백준, software academy expert  
 
 ## Picture reference  
 cpp : https://ko.wikipedia.org/wiki/C%2B%2B  
