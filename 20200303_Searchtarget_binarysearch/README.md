@@ -134,4 +134,4 @@ The picture under is a tree structure of this problem.
 </p>
 
 ### 문제 URL (LeetCode)  
-https://leetcode.com/problems/subarray-sum-equals-k/
+https://leetcode.com/problems/search-in-rotated-sorted-array/
