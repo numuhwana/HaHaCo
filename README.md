@@ -1,4 +1,4 @@
-# HaHaCo (하루 하나 코딩: Oneday One Code)  
+# HaHaCo (하루 하나 코딩: Oneday One Coding)  
 
 <p align="center"> 
 <img src="./image/algorithm.png" width="200" height="200">

@@ -26,7 +26,7 @@ Output: [0,1,1,2,1,2]
 3. Using memoization technique to implement algorithm above.
 ```
 <p align="center"> 
-<img src="./algorithmpic.png" width="250" height="250">
+<img src="./algorithmpic.png" width="250" height="200">
 </p>
 
 ### Codes  
@@ -58,7 +58,7 @@ public:
 
 
 <p align="center"> 
-<img src="./countingbit_performance">
+<img src="./countingbit_performance.png">
 </p>
 
 ### Discussion
