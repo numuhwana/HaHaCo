@@ -119,5 +119,5 @@ return 0;
 ### Discussion
 처음에 문제를 잘 못 이해하여 비용이 낮은 주차공간을 우선순위로 주차하는 것이라 생각하여 heap변수를 잘못 사용하여 문제를 잘 못 풀었었다. 이전에 잘 못 짠 코드에서 다시 수정하면서 vector을 하나 더 추가하여 코드가 좀더 복잡하게 짜여진 것 같았다.
 
-### 문제 URL (LeetCode)  
+### 문제 URL (SW expert academy)  
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW9j74FacD0DFAUY
