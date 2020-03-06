@@ -124,7 +124,7 @@ public:
 **Runtime:** 8 ms   
 **Memory Usage:** 9.2 MB  
 <p align="center"> 
-<img src="./perf.jpg">
+<img src="./perf.JPG">
 </p>
 
 ### Discussion
