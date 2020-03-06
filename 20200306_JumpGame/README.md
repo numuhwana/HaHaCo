@@ -123,6 +123,9 @@ public:
 ### Results (Performance)  
 **Runtime:** 8 ms   
 **Memory Usage:** 9.2 MB  
+<p align="center"> 
+<img src="./perf.jpg">
+</p>
 
 ### Discussion
 이 문제에서 가장 중요했던 점은 가장 멀리까지 갈수 있는 index를 찾아내어 다음 index로 지정하는 것이 핵심이었다. 다른사람이 푼 방법중 아래의 방법은 내가 현재 푼 방법의 150%정도 빠른 속도이다. 밑의 코드는 어디까지 도달 가능한 index 변수를 reach 로 지정하여 최대 도달 가능한 값이 nums 배열의 크기보다 큰지 작은지 비교하여 결과값을 반호나한다.     
