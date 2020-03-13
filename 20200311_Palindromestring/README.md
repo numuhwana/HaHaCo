@@ -67,7 +67,7 @@ public:
 **Memory Usage:** 8.2 MB   
 
 <p align="center"> 
-<img src="./capture.png">
+<img src="./capture.JPG">
 </p>
 
 ### Discussion
