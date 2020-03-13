@@ -26,8 +26,8 @@ Output: -1
 ## trial1
 ### Intuition
 ```
-1. logN 시간 안에 구현하기 위해서는 binary search tree의 방법으로 구현한다.   
-(Use Binary search tree algorithm to execute a code in time logN.)  
+1. binary search tree의 방법으로 구현한다.   
+(Use Binary search tree algorithm.)  
 2. des라는 변수를 만들어서 이전에 실행하던것의 반대로 진행하게 되는 경우 내가 찾던 target이 arr에 없는것으로 간주한다.  
 (I used variable "des" which figures out what previous status(reduce or increment from pivot) is to find out that there is no target number in the array.)  
 3. 1씩 인덱스를 증감하며 찾아준다.  
@@ -77,14 +77,12 @@ public:
 
 ## trial2
 ### Intuition
-```
-1. 거의 trial1과 같은 방법을 사용한다. logN 시간 안에 구현하기 위해서는 binary search tree의 방법으로 구현한다.     
-(It is almost same steps as trial1. Use Binary search tree algorithm to execute a code in time logN.)    
-3. des 대신 p(prev)라는 변수로 이전 index의 값과 비교하여 tree로 따지면 pivot의 오른쪽을 탐색하던 도중에 pivot의 왼쪽값이 나온경우를 판단해준다.  
+```   
+1. des 대신 p(prev)라는 변수로 이전 index의 값과 비교하여 tree로 따지면 pivot의 오른쪽을 탐색하던 도중에 pivot의 왼쪽값이 나온경우를 판단해준다.  
 (Instead of using "des", I used "p" variable to compare future index value with previous index value. This step is to find the case that while searching right side of pivot in binary tree, suddenly left side number of pivot appears. )   
-3. 1씩 인덱스를 증감하며 찾아준다.    
+2. 1씩 인덱스를 증감하며 찾아준다.    
 (Search target number by increasing or decreasing 1.)   
-4. 다음 index의 값과 현재 index의 값 사이에 target이 존재한다면 array에 target number가 존재하지 않는것을 간주한다.  
+3. 다음 index의 값과 현재 index의 값 사이에 target이 존재한다면 array에 target number가 존재하지 않는것을 간주한다.  
 (if there is target number between number of next index and current index, there is no target number in the array. )   
 ```
 ### Codes  
@@ -123,16 +121,15 @@ public:
 **Memory Usage:** 8.2 MB 
 
 ### Discussion
-ascending order로 되어있는 array에서 O(logN)의 runtime으로 만드는 방법은 N의 반만 search 할수 있도록 만들어주는 것이 중요했던 것 같다.  
-그림으로 표현하자면 아래와 같은 tree가 생성된 상태에서 search를 한것이라고 볼 수 있다.  
-
-To make runtime of O(logN) in ascending ordered array, it is important to search only a half of array.  
-The picture under is a tree structure of this problem.   
+내가 푼 방법에서는 binary search tree가 가장 worst case로 만들어진 경우 search를 하여 target을 찾는 방법으로 구현된 것이다. 밑의 사진과 같이 BST가 만들어져 있다.   
+In my solution, it searches for the target with BST made as the worst case. BST is made as shown in the picture below.  
 
 <p align="center"> 
 <img src="./samplepic.png">
 </p>
 
+더 나은 방법을 찾기 위해서는 pivot을 찾아서 binary search를 하는 것이다.  
+To find a better way, find a pivot and do a binary search.  
 
 ### 문제 URL (LeetCode)  
 https://leetcode.com/problems/search-in-rotated-sorted-array/
