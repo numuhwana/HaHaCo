@@ -66,7 +66,7 @@ public:
 **Memory Usage:** 17.2 MB  
 
 <p align="center"> 
-<img src="./capture.JPEG">
+<img src="./capture.JPG">
 </p>
 위에서 사용한 방법은 palindrome의 개수만큼의 시간이 걸린다.  
 
