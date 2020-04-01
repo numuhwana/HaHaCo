@@ -60,6 +60,14 @@ public:
 };
 ```
 
+### Results (Performance)  
+**Runtime:**  356 ms O(kn)이고 k는 n숫자 안에 존재하는 perfect square의 개수
+**Memory Usage:** 	9.6 MB
+
+<p align="center"> 
+<img src="./capture.JPG">
+</p>
+
 ## trial2 (다른 코드를 참고하여 작성함)
 ### Intuition
 ```
