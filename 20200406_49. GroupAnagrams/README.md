@@ -66,7 +66,7 @@ public:
 다른사람의 코드를 살펴보니 밑의 코드와 같이 좀더 간단한 방법으로 작성된 코드가 있었다. 그리고 runtime 역시 내 코드보다 2배 더 빠른 코드였다. 밑의 방법은 unordered_map에 vector<string> 자체를 넣어서 바로바로 결과값에 필요한 vector<string>을 만들어서 결과값에 삽입하였다.  
 
 
-When I looked at other people's code, there was code written in a simpler way like the code below. And the runtime was also twice as fast as my code. The following method puts the set of vector<string> required for the result value in unordered_map immediately and at the end inserts all vector<string> from map into the result value.  
+When I looked at other people's code, there was code written in a simpler way like the code below. And the runtime was also twice as fast as my code. The following method puts the set of vector<string> required for the result value in unordered_map immediately and at the end inserts all vector<string> from map into the result value.    
 
 ```cpp
 class Solution {
