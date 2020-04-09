@@ -1,28 +1,43 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 using namespace std;
+
+  struct ListNode {
+      int val;
+    ListNode *next;
+      ListNode(int x) : val(x), next(NULL) {}
+  };
+ 
 class Solution {
 public:
-	int countElements(vector<int>& arr) {
-		unordered_map<int, int> m;
-		int cnt = 0;
-		for (int i = 0; i < arr.size(); i++) {
-			m[arr[i]]++;
+	ListNode* middleNode(ListNode* head) {
+		int i = 0;
+		ListNode * cur = head;
+		while (cur != NULL) {
+			i++;
+			cur = cur->next;
 		}
-		for (int i = 0; i < arr.size(); i++) {
-			auto it = m.find(arr[i]+1);
-			if (it != m.end()) {
-				cnt++;
-			}
+		i = floor(i / 2);
+		cur = head;
+		while (i > 0) {
+			i--;
+			cur = cur->next;
 		}
-		return cnt;
+		return cur;
 	}
 };
+ListNode* makeLinkedList(vector<int> a) {
+	ListNode * head=new ListNode(a[0]);
+	ListNode * cur = head;
+	for (int i = 1; i < a.size(); i++) {
+		cur->next = new ListNode(a[i]);
+		cur = cur->next;
+	}
+	return head;
+}
 int main() {
+	vector<int> arr = { 1,2,3,4,5,6 };
+	ListNode * h = makeLinkedList(arr);
 	Solution sol = Solution();
-	vector<int> n = { 1,3,2,3,5,0 };
-	cout << sol.countElements(n);
-
-	return 0;
+	cout<<sol.middleNode(h)->val;
 }
