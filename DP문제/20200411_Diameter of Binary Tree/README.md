@@ -128,8 +128,8 @@ public:
 ```
 
 ### Results (Performance)  
-**Runtime:**  4 ms O(n)의 runtime을 가지고 있다.
-**Memory Usage:** 	17.4 MB
+**Runtime:**  4 ms O(n)의 runtime을 가지고 있다.  
+**Memory Usage:** 	17.4 MB  
 
 <p align="center"> 
 <img src="./capture.JPG">
