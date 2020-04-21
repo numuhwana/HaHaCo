@@ -15,9 +15,7 @@ Submissions making more than 1000 calls to BinaryMatrix.get will be judged Wrong
 For custom testing purposes you're given the binary matrix mat as input in the following four examples. You will not have access the binary matrix directly.  
 
 **Example1:**   
-<p align="center"> 
-<img src="./diag5.JPG">
-</p>
+[!diag5.jpg](https://github.com/numuhwana/HaHaCo/blob/master/20200422_Leftmost%20Column%20with%20at%20Least%20a%20One/diag5.jpg)
 
 ```
 Input: mat = [[0,0],[1,1]]
@@ -25,9 +23,7 @@ Output: 0
 ```
 
 **Example2:**   
-<p align="center"> 
-<img src="./diag4.JPG">
-</p>
+[!diag4.jpg](https://github.com/numuhwana/HaHaCo/blob/master/20200422_Leftmost%20Column%20with%20at%20Least%20a%20One/diag4.jpg)
 
 ```
 Input: mat = [[0,0],[0,1]]
@@ -35,9 +31,7 @@ Output: 1
 ```
 
 **Example3:**   
-<p align="center"> 
-<img src="./diag3.JPG">
-</p>
+[!diag3.jpg](https://github.com/numuhwana/HaHaCo/blob/master/20200422_Leftmost%20Column%20with%20at%20Least%20a%20One/diag3.jpg)
 
 ```
 Input: mat = [[0,0],[0,0]]
@@ -45,9 +39,7 @@ Output: -1
 ```
 
 **Example4:**   
-<p align="center"> 
-<img src="./diag2.JPG">
-</p>
+[!diag2.jpg](https://github.com/numuhwana/HaHaCo/blob/master/20200422_Leftmost%20Column%20with%20at%20Least%20a%20One/diag2.jpg)
 
 ```
 Input: mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
