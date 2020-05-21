@@ -1,66 +1,71 @@
 # 62. Unique Paths
-Say you have an array for which the ith element is the price of a given stock on day i.
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).  
 
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).  
 
-Note that you cannot sell a stock before you buy one.
+How many possible unique paths are there?  
+
+## Constraints:
+
+1 <= m, n <= 100
+It's guaranteed that the answer will be less than or equal to 2 * 10 ^ 9.
+
+<p align="center"> 
+<img src="./pic.JPG">
+</p>
 
 ## Example1
 
 ```
-Input: [7,1,5,3,6,4]
-Output: 5
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-             Not 7-1 = 6, as selling price needs to be larger than buying price.
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
 ```
 
 ## Example2
 
 ```
-Input: [7,6,4,3,1]
-Output: 0
-Explanation: In this case, no transaction is done, i.e. max profit = 0.
+Input: m = 7, n = 3
+Output: 28
 ```
 
 ## trial1
 ### Intuition
 ```
-single pass로 가장 작은 값이 나왔을때는 현재 smallest인 cursm을 업데이트하고 cursm보다 p[i] 값이 더 크다면 
-두 사이의 차와 현재 최대 차이(diff)중 비교하여 그 차이가 더 큰값으로 diff를 업데이트 해준다.
+DP를 사용하여 문제를 해결하였다.
+어릴때 길찾기 문제랑 비슷한 방법이였는데 왼쪽에 있는 값과 위에 있는 값을 더해서 현재값을 만드는 방법이다.
 
-I used single pass algorithm. 
-When the smallest value comes out, update the current smallest cursm, and if p [i] is greater than cursm
-The difference between the two and the current maximum difference (diff) is compared and the difference is updated to a larger value.
+DP was used to solve the problem.
+It was similar to the wayfinding problem when I was young, but it is a method of adding the value on the left and the value on the top to make the current value.
 ```
 ### Codes  
 ```cpp
 class Solution {
 public:
     Solution() {
-        cin.tie(nullptr);
-        cout.tie(nullptr);
         ios::sync_with_stdio(false);
+        cout.tie(nullptr);
+        cin.tie(nullptr);
     }
-    int maxProfit(vector<int>& p) {
-        if (p.size() == 0) return 0;
-        int cursm = p[0],diff=0;
-
-        for (int i = 1; i < p.size(); i++) {
-            if (cursm < p[i]) {
-                diff=max(p[i] - cursm,diff);//diff가 가장 큰것 가져오기
-            }
-            else if (cursm > p[i]) {
-                cursm = p[i];//가장 작은값으로 업데이트
+    int uniquePaths(int m, int n) {
+        vector<vector<int>> arr(n, vector<int>(m, 1));
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < m; j++) {
+                arr[i][j] = arr[i - 1][j] + arr[i][j - 1];
             }
         }
-        return diff;
+        return arr[n - 1][m - 1];
     }
 };
 ```
 
 ### Results (Performance)  
-**Runtime:**  0 ms O(n)  
-**Memory Usage:** 	13.3 MB  
+**Runtime:**  0 ms O(nm)  
+**Memory Usage:** 	6.4 MB  
 
 <p align="center"> 
 <img src="./capture.JPG">
@@ -68,4 +73,4 @@ public:
 
 
 ### 문제 URL (LeetCode)  
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+https://leetcode.com/problems/unique-paths/
