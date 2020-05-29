@@ -1,8 +1,0 @@
-- name: Instagram
-  link: 'https://www.instagram.com/__yujiny__/?hl=ko'
-  social_icon: Instagram
-  new_window: true
-- name: RSS
-  link: '/feed.xml'
-  social_icon: RSS
-  new_window: true
