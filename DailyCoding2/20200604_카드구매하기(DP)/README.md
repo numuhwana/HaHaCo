@@ -63,25 +63,23 @@ output: 481
 using namespace std;
 int N;
 int main() {
-	freopen("카드구매하기.txt", "r", stdin);
+	//freopen("카드구매하기.txt", "r", stdin);
 	cin >> N;
 	vector<int> card;
 	vector<int> dp;
 	int tmp = 0;
-	int lrg = 0;
-	card.push_back(0);
 	dp.push_back(0);
 	cin >> tmp;
-	card.push_back(tmp);
-	lrg = 1;
 	dp.push_back(tmp);
+	int j = 0;
 	for (int i = 2; i <= N; i++) {
 		cin >> tmp;
-		card.push_back(tmp);
-		if ((double)(card[lrg] / lrg) <= (double)(tmp / i)) {//카드개수당 가격이 높은걸로 업데이트
-			lrg = i;
+		dp.push_back(tmp);
+		j = 1;
+		while (j <= (i / 2)) {
+			dp[i] = max(dp[i],dp[i - j]+dp[j]);
+			j++;
 		}
-		dp.push_back(dp[i - lrg] + card[lrg]);//최대값 인덱스와 현재인덱스-최대값 인덱스의 값 더하기
 	}
 	cout << dp[N];
 	return 0;

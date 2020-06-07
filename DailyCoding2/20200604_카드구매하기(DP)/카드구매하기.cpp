@@ -10,15 +10,12 @@ int main() {
 	vector<int> card;
 	vector<int> dp;
 	int tmp = 0;
-	card.push_back(0);
 	dp.push_back(0);
 	cin >> tmp;
-	card.push_back(tmp);
 	dp.push_back(tmp);
 	int j = 0;
 	for (int i = 2; i <= N; i++) {
 		cin >> tmp;
-		card.push_back(tmp);
 		dp.push_back(tmp);
 		j = 1;
 		while (j <= (i / 2)) {
