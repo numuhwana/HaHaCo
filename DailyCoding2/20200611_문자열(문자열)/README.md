@@ -54,44 +54,6 @@ int main() {
 }
 ```
 
-## trial1
-### Intuition
-```
-위의 예제가 제대로 안되었기 때문에 새로운 방법을 생각하였다.
-반으로 나눈값까지 반복문을 돌려주어서 그중 가장 큰 패키지의 조합이
-나오면 그 값으로 업데이트 해주는 방법이다.
-trial 1에서는 너무 퍼포먼스만 생각하고 풀어서 예외처리를 못한것같다.
-```
-
-### Codes  
-```cpp
-int main() {
-	//freopen("카드구매하기.txt", "r", stdin);
-	cin >> N;
-	vector<int> card;
-	vector<int> dp;
-	int tmp = 0;
-	card.push_back(0);
-	dp.push_back(0);
-	cin >> tmp;
-	card.push_back(tmp);
-	dp.push_back(tmp);
-	int j = 0;
-	for (int i = 2; i <= N; i++) {
-		cin >> tmp;
-		card.push_back(tmp);
-		dp.push_back(tmp);
-		j = 1;
-		while (j <= (i / 2)) {
-			dp[i] = max(dp[i],dp[i - j]+dp[j]);
-			j++;
-		}
-	}
-	cout << dp[N];
-	return 0;
-}
-```
-
 ### Results (Performance)    
 **Runtime:**  0 ms   
 **Memory Usage:** 	1984 kB    
