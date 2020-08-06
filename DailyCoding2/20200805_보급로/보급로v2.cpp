@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 #include <string>
-//#pragma warning (disable:4996)
+#pragma warning (disable:4996)
 using namespace std;
 int xx[4] = { 0,0,1,-1 };
 int yy[4] = { 1,-1,0,0 };
@@ -11,16 +11,19 @@ struct block {
     int x = 0;
     int y = 0;
     int val = 0;
+    bool operator>(const block& b) const {
+        return val > b.val;
+    }
 };
 int function(vector<vector<int>> &grid,int n,int mx) {
     vector<vector<int>> visit(n,vector<int>(n,mx));//최고 숫자로 초기화
-    queue<block> q;
+    priority_queue<block,vector<block>,greater<block>> q;
     block cur;
     q.push(cur);
     int nx, ny;
     visit[0][0] = 0;
     while (!q.empty()) {
-        cur = q.front();
+        cur = q.top();
         q.pop();
         if (cur.x == n && cur.y == n) break;
         for (int i = 0; i < 4; i++) {
@@ -42,7 +45,7 @@ int function(vector<vector<int>> &grid,int n,int mx) {
     return visit[n - 1][n - 1];
 }
 int main() {
-    //freopen("input.txt", "r", stdin);
+    freopen("input.txt", "r", stdin);
     cin.tie(NULL);
     cout.tie(NULL);
     ios::sync_with_stdio(NULL);
