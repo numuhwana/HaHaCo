@@ -3,7 +3,7 @@
 <p align="center"> 
 <img src="/image/algorithm.png" width="200" height="200">
 <img src="/image/cpppicture.png" width="200" height="200">
-<img src="./javaicon.JPG" width="200" height="200">
+<img src="/image/javaicon.JPG" width="200" height="200">
 </p>
 
 
