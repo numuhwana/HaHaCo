@@ -78,6 +78,7 @@ public class Main{
     
     //static boolean visit[][];
     static int arr[][];
+    //xx와 yy는 다음 경로로 가기 위한 좌표 현재 00 기준으로 12시부터 시계방향
     static int xx[]= {0,1,1,1,0,-1,-1,-1};
     static int yy[]= {-1,-1,0,1,1,1,0,-1};
     public static void main(String[] args) throws Exception{
@@ -118,7 +119,7 @@ public class Main{
                         while(!q.isEmpty()) {//BFS 시작
                             cur=q.poll();
                             for(int z=0;z<8;z++) {
-                                int nx=cur.x+xx[z];
+                                int nx=cur.x+xx[z];//다음 좌표 값
                                 int ny=cur.y+yy[z];
                                 if(nx>=0 && ny>=0 && nx<m && ny<n && arr[ny][nx]==1) {//범위 안에 들었는지 확인, 그리고 현재 위치가 땅일 경우에만 큐에 넣기
                                     b nw=new b();
