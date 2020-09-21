@@ -76,17 +76,12 @@ public class Main{
         int y;
     }
     
-    //static boolean visit[][];
     static int arr[][];
     //xx와 yy는 다음 경로로 가기 위한 좌표 현재 00 기준으로 12시부터 시계방향
     static int xx[]= {0,1,1,1,0,-1,-1,-1};
     static int yy[]= {-1,-1,0,1,1,1,0,-1};
     public static void main(String[] args) throws Exception{
         // TODO Auto-generated method stub
-        //FileInputStream fs=new FileInputStream(INPUT);
-        //PrintStream ps=new PrintStream(new FileOutputStream(OUTPUT));
-        //System.setIn(fs);
-        //System.setOut(ps);
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         //StringTokenizer st=new StringTokenizer(br.readLine());
         StringTokenizer st;
@@ -96,7 +91,6 @@ public class Main{
             int m=Integer.parseInt(st.nextToken());
             int n=Integer.parseInt(st.nextToken());
             if(n==0 || m==0) break;
-            //visit=new boolean[n][m];//visit
             arr=new int[n][m];
             for(int i=0;i<n;i++) {//입력받기
                 st=new StringTokenizer(br.readLine());
