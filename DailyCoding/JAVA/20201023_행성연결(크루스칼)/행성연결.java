@@ -53,7 +53,7 @@ static private PriorityQueue<con> q=new PriorityQueue<con>();
 				}
 			}
 		}
-		long cnt=0;
+		long cnt=1;
 		long price=0;
 		while(!q.isEmpty()) {
 			con cur=q.poll();

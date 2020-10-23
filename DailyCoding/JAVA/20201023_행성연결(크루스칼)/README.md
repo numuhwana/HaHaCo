@@ -63,6 +63,7 @@ isConnected 함수는 두 node가 서로 연결되어있는지를 확인하는 �
 ```
 ### Codes  
 ```java
+public class Main_16398 {
 static class con implements Comparable<con>{
     int x;
     int y;
@@ -90,11 +91,9 @@ static private boolean isConnected(int parent[],int x,int y) {
 }
 static private PriorityQueue<con> q=new PriorityQueue<con>();
 
-    static private String INPUT="C:/spring_workspace/DailyCodingJAVA/input/Main_16398.txt"; 
-    public static void main(String[] args) throws Exception{
+   public static void main(String[] args) throws Exception{
         // TODO Auto-generated method stub
-        FileInputStream fs=new FileInputStream(INPUT);
-        System.setIn(fs);
+
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int n=Integer.parseInt(br.readLine());
@@ -114,7 +113,7 @@ static private PriorityQueue<con> q=new PriorityQueue<con>();
                 }
             }
         }
-        long cnt=0;
+        long cnt=1;
         long price=0;
         while(!q.isEmpty()) {
             con cur=q.poll();
@@ -134,8 +133,8 @@ static private PriorityQueue<con> q=new PriorityQueue<con>();
 ```
 
 ### Results (Performance)  
-**Runtime:** 80 ms   
-**Memory Usage:**   19664 kb    
+**Runtime:** 872 ms   
+**Memory Usage:**   155388 kb    
 
 <p align="center"> 
 <img src="./capture.JPG">
@@ -143,4 +142,4 @@ static private PriorityQueue<con> q=new PriorityQueue<con>();
 
 
 ### 문제 URL (백준)  
-https://www.acmicpc.net/problem/14916
+https://www.acmicpc.net/problem/16398
