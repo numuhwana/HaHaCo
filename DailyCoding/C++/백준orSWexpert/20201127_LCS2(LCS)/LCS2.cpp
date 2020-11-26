@@ -23,13 +23,6 @@ int main() {
 			}
 		}
 	}
-	//cout << b<<endl;
-	//for (int i = 1; i < arr.size(); i++) {
-	//	cout << a[i];
-	//	for (int j = 1; j < arr[i].size(); j++) {
-	//		cout << arr[i][j] << " ";
-	//	}cout << endl;
-	//}cout << endl;
 	cout << arr[a.size()-1][b.size()-1]<<endl;
 	if (arr[a.size() - 1][b.size() - 1] > 0) {
 		int i, j;

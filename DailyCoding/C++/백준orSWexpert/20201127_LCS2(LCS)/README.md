@@ -18,20 +18,12 @@ LCS가 여러 가지인 경우에는 아무거나 출력하고, LCS의 길이가
 
 ```
 Input: 
-level
+ACAYKP
+CAPCAK
 
 Output: 
-1
-```
-
-## Example2
-
-```
-Input: 
-baekjoon
-
-Output: 
-0
+4
+ACAK
 ```
 
 ## trial1
